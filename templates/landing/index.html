@@ -1,0 +1,1500 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>COVID19 Updates</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='landing/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{url_for('static', filename='landing/assets/css/fontawesome.css')}}" > 
+    <link rel="stylesheet" href="{{url_for('static', filename='landing/assets/css/animated.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='landing/assets/css/owl.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='landing/assets/css/style.css')}}"> 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='landing/assets/images/1024.png') }}">
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4>COVID<span>Tracking</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">Dashboard</a></li>
+              <li class="scroll-to-section"><a href="#cdc">CDC Guidelines</a></li>
+              <li class="scroll-to-section"><a href="#resource">Services</a></li>
+              <li class="scroll-to-section"><a href="#news">Pricing</a></li> 
+              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Login Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <h6>Welcome to COVIDTracking</h6>
+                <h2>We are offering <br> <em>UP-TO-DATE</em>  <span>COVID19</span> Information</h2>
+                <p>Made by Bootstrap, Flask, SQLAlchemy <br>A great template for COVID related web application <br> Developed by Beryl Zhang </p>
+                <a class="btn btn-info btn-action btn-block mr-10" data-wow-delay="0.2s" href="Solutions">Dashboard</a>
+                <a class="btn btn-info btn-action btn-block mr-10" data-wow-delay="0.2s" href="#pricing">Services</a>
+                <a class="btn btn-info btn-action btn-block" data-wow-delay="0.2s" href="#pricing">Pricing</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="{{url_for('static', filename='landing/assets/images/covidRightTop.png')}}"   alt="team meeting">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="update-section wow bounceIn" data-wow-duration="1s" data-wow-delay="1.2s" style="background-color:rgba(0, 0, 0, 0.5);" >
+    <div class="container" >
+        <div class="row text-center">
+          
+          <body onload="startDate()">
+          <h6> <strong>Real Time Updates From Worldometer</strong></h6>
+          <h2 id='Date'></h2>
+          <script>
+            function startDate() {
+              var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    seconds = d.getSeconds().toString().length == 1 ? '0'+d.getSeconds() : d.getSeconds(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+
+                document.getElementById('Date').innerHTML= 'Till ' + days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+':'+seconds+' '+ampm+' '+timeZone;
+                setTimeout(startDate, 1000);
+            }
+         </script>
+
+
+          </body>
+          <body >
+      
+
+            <div class="col-6 col-md-2">
+              
+                <div class="update-up">
+                  <div class="test-performed">
+                    <div class="update-icon">
+                      <span class="iconify" data-icon="ion-ios-flask" data-inline="false"></span>
+                    </div>
+                    <h3><span class="count-up0" data-from="0" data-to="{{allData['totalTest']}}" data-time="3000" id="demo" >0</span>+</h3>
+                    <h5><br> </h5>
+                    <div class="update-text">
+                        <h4><strong>Tests Performed</strong></h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="update-up">
+                  <div class="case-confirmed">
+                    <div class="update-icon">
+                      <span class="iconify" data-icon="ion-ios-paper" data-inline="false"></span>
+
+                    </div>
+                    <h3><span class="count-up1" data-from="0" data-to="{{allData['totalCases']}}" data-time="3000">0</span>+</h3>
+                    <h5><span class="count-up11" data-from="0" data-to="{{allData['newCases']}}"data-time="3000">0</span>+</h5>
+                    <div class="update-text">
+                        <h4><strong>Cases Confirmed</strong></h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="update-up">
+                  <div class="people-died">
+                    <div class="update-icon">
+                      <span class="iconify" data-icon="ion-arrow-graph-down-right" data-inline="false"></span>
+                    </div>
+                    <h3><span class="count-up2" data-from="0" data-to="{{allData['totalDeaths']}}"  data-time="3000">0</span>+</h3>
+                    <h5><span class="count-up21" data-from="0" data-to="{{allData['newDeaths']}}"  data-time="3000">0</span>+</h5>
+                    <div class="update-text">
+                        <h4><strong>People Died</strong></h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="update-up">
+                  <div class="people-recovered">
+                    <div class="update-icon">
+                      <span class="iconify" data-icon="ion-arrow-graph-up-right" data-inline="false"></span>
+                    </div>
+                    <h3><span class="count-up3" data-from="0" data-to="{{allData['totalRecovered']}}" data-time="3000">0</span>+</h3>
+                    <h5><span class="count-up31" data-from="0" data-to="{{allData['newRecovered']}}" data-time="3000">0</span>+</h5>
+                    <div class="update-text">
+                        <h4><strong>People Recovered</strong></h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+              <div class="update-up">
+                <div class="active-cases">
+                  <div class="update-icon">
+                    <span class="iconify" data-icon="ion-thermometer" data-inline="false"></span>
+                  </div>
+                  <h3><span class="count-up4" data-from="0" data-to="{{allData['activeCases']}}" data-time="3000">0</span>+</h3>
+                  <h5> <br> </h5>
+                  <div class="update-text">
+                      <h4><strong>Active Cases</strong></h4>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="update-up">
+              <div class="critical-cases">
+                <div class="update-icon">
+                  <span class="iconify" data-icon="ion-ios-pulse-strong" data-inline="false"></span>
+                </div>
+                <h3><span class="count-up5" data-from="0" data-to="{{allData['criticalCases']}}"data-time="3000">0</span>+</h3>
+                <h5> <br> </h5>
+                <div class="update-text">
+                    <h4><strong>Critical Conditions</strong></h4>
+                </div>
+            </div>
+          </div>
+        </div>
+        </body>
+        </div>
+    </div>
+</div>
+
+<div id="resource" class="our-resource section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+          <h2>Log in to see details from <br> <em>more authentic sources</em> &amp; <br><span>different countries</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="hidden-content">
+              <h4>WHO World Health Organization</h4>
+              <p>a specialized agency of the United Nations responsible for international public health.</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/WHO.png')}}"  alt="" width="100" height="120">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+            <div class="hidden-content">
+              <h4>Johns Hopkins Corona-<br>virus Resource Center</h4>
+              <p>Covid-19 Global Cases by the Center for Systems Science and Engineering at JHU.</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/JHU.png')}}"  alt="" width="100" height="120">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="hidden-content">
+              <h4>One Point Three Acres <br>Global COVID-trcker</h4>
+              <p>One of the most active online communities for Chinese living in North America</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/one-point-three-acres.png')}}"  alt="" width="60" height="120">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="hidden-content">
+              <h4>Google Virus<br> Distribution Map</h4>
+              <p>In areas affected by COVID-19, you can use Google Maps to obtain relevant information.</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/googleMap.png')}}" alt="" width="60" height="120">
+            </div>
+          </div>
+        </a>
+
+      </div>
+      <p><br><br><br><br></p>
+      
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="hidden-content">
+              <h4>Worldometer</h4>
+              <p>a reference website that provides updates and real-time statistics for diverse topics. </p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/worldometer.png')}}" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="hidden-content">
+              <h4>Our World In Data</h4>
+              <p>Research and data to make progress against the world’s largest problems</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/ourWorldInData.png')}}" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="hidden-content">
+              <h4>New York Times</h4>
+              <p>an American daily newspaper based in New York City with a worldwide readership.</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/newYorkTime.png')}}" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="hidden-content">
+              <h4>Gavi</h4>
+              <p>a public–private global health partnership with the goal of increasing access to immunization in poor countries.</p>
+            </div>
+            <div class="showed-content">
+              <img src="{{url_for('static', filename='landing/assets/images/gavi.png')}}" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div id="cdc" class="cdc section">
+    <div class="mask wow bounceInLeft" data-wow-duration="0.75s" data-wow-delay="0s">
+    <h2>Guidelines According to WHO (World Health Organization)</h2>
+    <div class="container">
+     
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <img src="{{url_for('static', filename='landing/assets/images/preventionFigure.png')}}" alt="person graphic" width="175" height="275" >
+          </div>
+        </div>
+        
+        <div class="col-lg-9 align-self-center">
+          <div class="services">
+            <div class="row">
+              <h3 ><span> Guidelines for Masks </span></h3>
+              <div class="col-lg-9">
+                
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div class="icon">
+                    <img src="{{url_for('static', filename='landing/assets/images/chooseMasks.png')}}"  alt="reporting" >
+                  </div>
+                  <div class="right-text">
+                    <h4><span>Choosing masks</span></h4>
+                    <p><span>Don’t use masks with valves.</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                  <div class="icon">
+                    <img src="{{url_for('static', filename='landing/assets/images/cleanHands.png')}}" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4><span>Cleaning Hands</span></h4>
+                    <p><span>Clean your hands before you put your mask on, as well as before and after you take it off, and after you touch it at any time.</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                  <div class="icon">
+                    <img src="{{url_for('static', filename='landing/assets/images/wearMasks.png')}}" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4><span>Wearing Masks</span></h4>
+                    <p><span>Make sure it covers both your nose, mouth and chin.</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                  <div class="icon">
+                    <img src="{{url_for('static', filename='landing/assets/images/takeOffMasks.png')}}" alt="">
+                  </div>
+                  <div class="right-text">
+                    <h4><span>Taking masks off</span></h4>
+                    <p><span>When you take off a mask, store it in a clean plastic bag, and every day either wash it if it’s a fabric mask, or dispose of a medical mask in a trash bin.</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="vaccine wow slideInRight" data-wow-delay="0.1s">
+      <div class="container">
+       
+        <div class="row">
+          <div class="col-lg-9 align-self-center">
+            <div class="services">
+              <div class="row">
+                <h3 ><span> Guidelines for Vaccine </span></h3>
+                <div class="col-lg-9">
+                  
+                  <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='landing/assets/images/freeVaccine.png')}}"  alt="reporting" >
+                    </div>
+                    <div class="right-text">
+                      <h4><span>How do I find a free vaccine?</span></h4>
+                      <p><span class="iconify" data-icon="ion-earth" data-inline="false"></span>Find a <span>vaccine</span> near you</p>
+                      <p><span class="iconify" data-icon="ion-chatbox-ellipses" data-inline="false"></span>Text your zip code to <span>438829</span></p>
+                      <p><span class="iconify" data-icon="ion-ios-telephone" data-inline="false"></span>Call <span>1-800-232-0233</span></p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  
+                  <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='landing/assets/images/differentVaccine.png')}}" alt="">
+                    </div>
+                    <div class="right-text">
+                      <h4><span>What different vaccines are available?</span></h4>
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Pfizer-BioNTech.html"><img src="{{url_for('static', filename='landing/assets/images/pfizer.png')}}" alt="" class="center">
+  
+                          <p>Pfizer-BioNTech</p>
+                          <p><span>2 shots</span> </p> 
+                          <p>12 years and older</p></a>
+                        </div>  
+                        <br>
+                        <div class="col-lg-4">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Moderna.html"><img src="{{url_for('static', filename='landing/assets/images/moderna.png')}}" alt="" class="center">
+
+                          <p>Moderna</p>    
+                          <p><span>2 shots</span> </p>
+                          <p>18 years and older </p></a>
+                        </div>
+                        <br>
+                        <div class="col-lg-4">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/janssen.html"><img src="{{url_for('static', filename='landing/assets/images/Johnson&Johnson.png')}}" alt="" class="center">
+
+                          <p>Johnson & Johnson</p>
+                          <p><span>1 shot</span> </p> 
+                          <p>18 years and older</p></a>
+                        </div> 
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-lg-12">
+                  <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                    <br>
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='landing/assets/images/areTheySafe.png')}}" alt="">
+                    </div>
+                    <div class="right-text">
+
+                      <h4><span>Are they safe?</span></h4>
+                      <p><span class="iconify" data-icon="ion-ios-thumbs-up" data-inline="false"></span>COVID-19 vaccines are <span>safe and effective</span>.</p>
+                      <p><span class="iconify" data-icon="ion-ios-clock" data-inline="false"></span>CDC recommends you get a COVID-19 vaccine <span>as soon as possible</span>.</p>
+                      <p><span class="iconify" data-icon="ion-ios-checkmark-circle" data-inline="false"></span>You can <span>resume activities</span> after getting fully vaccinated. </p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='landing/assets/images/getVaccinatedSideEffect.png')}}" alt="">
+                    </div>
+                    <div class="right-text">
+                      <h4><span>What are possible side effects?</span></h4>
+
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect/after.html"><img src="{{url_for('static', filename='landing/assets/images/OnTheArm.png')}}" alt="" class="center" height="50px">
+  
+                          <p>On the arm</p>
+                          <p><span>Pain</span> </p> 
+                          <p><span>Redness</span> </p> 
+                          <p><span>Swelling</span> </p> 
+                          </a>
+                        </div>  
+                        <br>
+                        <div class="col-lg-6">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect/after.html"><img src="{{url_for('static', filename='landing/assets/images/restOfYourBody.png')}}" alt="" class="center" height="50px">
+                            <p>Throughout rest of your body</p>
+                            <div class="row">
+                              <div class="col-lg-1">
+
+                              </div>
+                              <div class="col-lg-5">
+                                <p><span>Tiredness </span> </p> 
+                                <p><span>Headache</span> </p> 
+                                <p><span>Muscle pain</span> </p> 
+                              </div>
+                              <div class="col-lg-5">
+                                <p><span>Chills</span> </p> 
+                                <p><span>Fever</span> </p> 
+                                <p><span>Nausea</span> </p> 
+                              </div>
+                              <div class="col-lg-1">
+
+                              </div>
+                            </div>
+
+                              
+                          </a>
+                        </div>
+                        
+                      
+                    </div>
+
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                    <div class="icon">
+                      <img src="{{url_for('static', filename='landing/assets/images/afterVaccinated.png')}}" alt="">
+                    </div>
+                    <div class="right-text">
+                      <br>
+                      <h4><span>How to relieve side effects?</span></h4>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect/after.html"><img src="{{url_for('static', filename='landing/assets/images/coverWound.png')}}" alt="" class="center" height="50px">
+  
+                          <p> Reduce pain from the arm</p>
+                          <p>Apply a <span>clean, cool, wet </span>washcloth over the area. </p> 
+                          <p><span>Use or exercise</span>  your arm.</p> 
+                          </a>
+                        </div>  
+                        <br>
+                        <div class="col-lg-6">
+                          <br>
+                          <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect/after.html"><img src="{{url_for('static', filename='landing/assets/images/drinkMilk.png')}}" alt="" class="center" height="50px">
+                            <p>Reduce discomfort from fever</p>
+
+ 
+                                <p>Drink <span>plenty of fluids.</span> </p> 
+                                <p>Dress <span>lightly.</span> </p> 
+
+
+                            
+
+                              
+                          </a>
+                        </div>
+                        
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+          <div class="col-lg-3 align-self-center">
+            <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <img src="{{url_for('static', filename='landing/assets/images/getVaccinatedFigure.png')}}" alt="person graphic" width="200" height="275" >
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="symptom wow bounceInLeft" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+         
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                <img src="{{url_for('static', filename='landing/assets/images/symptomFigure.png')}}" alt="person graphic" width="175" height="200" >
+              </div>
+            </div>
+            
+            <div class="col-lg-9 align-self-center">
+              <div class="services">
+                <div class="row">
+                  <h3 ><span> Symptoms of COVID </span></h3>
+                  <div class="col-lg-6">
+                    
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/cough.png')}}"  alt="reporting" >
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Coughing</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/chill.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Chill</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/fever.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Fever</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/lossOfTaste.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Loss of Taste</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/soreThroat.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Sore Throat</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/pneumonia.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>pneumania</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/headache.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Headache</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/fatigue.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Fatigue</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/troubleBreathing.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Trouble Breathing</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                      <div class="icon">
+                        <img src="{{url_for('static', filename='landing/assets/images/runningNose.png')}}" alt="">
+                      </div>
+                      <div class="right-text">
+                        <h4><span>Running Nose</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="testing wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
+          <div class="container">
+           
+            <div class="row">
+              <div class="col-lg-9 align-self-center">
+                <div class="services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                  <div class="row">
+                    <h3 ><span> Guidelines for Testing </span></h3>
+                    <h4><span><strong>Choose a Test Type</strong></span></h4>
+                    
+                      
+                        
+                        <div class="col-lg-4">
+                          <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        
+                            <br>
+                            <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><span class="iconify" data-icon="ion-car" data-inline="false"></span>Free <span> Drive-Through</span> test</p></a>
+                          <br>
+                          <div class="icon">
+                            <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/PCR.png')}}" alt=""></a>
+                          </div>
+                          <div class="right-text">
+                            <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Rapid Diagnostic Test (ID NOW)</strong></p>
+                            <p><i>Rapid Molecular Test</i></p></a>
+                          </div>
+                          <br>
+                        
+                      </div>
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="icon">
+                          <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/rapidDiagnosis.png')}}" alt=""></a>
+                        </div>
+                        <div class="right-text">
+                          <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Diagnostic Lab Test (PCR)</strong></p>
+                      <p><i>RT-PCR Diagnostic Panel Test</i></p></a>
+                    </div>
+                    </div>
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                      <br>
+                    <div class="icon">
+                      <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/rapidAntigen.png')}}" alt=""></a>
+                    </div>
+                    <div class="right-text">
+                      <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Rapid Antigen Test </strong></p>
+                      <p><i>(BinaxNOW)</i></p></a>
+                    </div>
+                  </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                        <br>
+                          
+                          <a href="https://www.walgreens.com/topic/promotion/covid-testing.jsp?ban=covidvaccineLP_testinginfoLP_fy21#at-home-testing"><p><span class="iconify" data-icon="ion-flask" data-inline="false"></span>Rapid<span> antigen</span> self-test</p></a>
+                          <br>
+                          <div class="icon">
+                            <a href="https://www.walgreens.com/store/c/binaxnow-covid-19-antigen-self-test-kit/ID=300414527-product&ban=covidfy21_newtestingpg_binax"><img src="{{url_for('static', filename='landing/assets/images/binaxNow.png')}}" alt=""></a>
+                            
+                          </div>
+                          <div class="right-text">
+                            <a href="https://www.walgreens.com/store/c/binaxnow-covid-19-antigen-self-test-kit/ID=300414527-product&ban=covidfy21_newtestingpg_binax"><p><strong>BinaxNOW</strong></p>
+                            <p><i>COVID-19 Antigen Self-Test Kit</i></p></a>
+                          </div>
+                        
+                      </div>
+
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <br>
+                        <div class="icon">
+                        <a href="https://www.walgreens.com/store/c/quickvue-at-home-otc-covid-19-test-kit-2-tests/ID=300416410-product"><img src="{{url_for('static', filename='landing/assets/images/quickVue.png')}}" alt=""></a>
+                        </div>
+                        <div class="right-text">
+                          <a href="https://www.walgreens.com/store/c/quickvue-at-home-otc-covid-19-test-kit-2-tests/ID=300416410-product"><p><strong>QuickVue</strong></p>
+                          <p><i>At-Home OTC COVID-19 Test Kit</i></p></a>
+                        </div>
+                      
+                    </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                        <br>
+                          
+                          <a href="https://www.walgreens.com/topic/promotion/covid-testing.jsp?ban=covidvaccineLP_testinginfoLP_fy21#at-home-testing"><p><span class="iconify" data-icon="ion-eyedrop" data-inline="false"></span> <span> PCR</span> at-home testing</p></a>
+                          <br>
+                          <div class="icon">
+                            <a href="https://www.walgreens.com/store/c/labcorp-pixel-covid-19-pcr-test-home-collection-kit/ID=300413565-product&ban=covidfy21_newtestingpg_labcorp"><img src="{{url_for('static', filename='landing/assets/images/labCorpPixel.png')}}" alt=""></a>
+                          </div>
+                          <div class="right-text">
+                            <a href="https://www.walgreens.com/store/c/labcorp-pixel-covid-19-pcr-test-home-collection-kit/ID=300413565-product&ban=covidfy21_newtestingpg_labcorp"><p><strong>Labcorp Pixel</strong></p>
+                            <p><i>PCR Test Home Collection Kit</i></p></a>
+                          </div>
+                        
+                      </div>
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                        <br>
+                          
+                          <div class="icon">
+                            <a href="https://www.walgreens.com/store/c/everlywell-covid-19-test-home-collection-kit-dtc/ID=300413694-product&ban=covidfy21_newtestingpg_everlywell"><img src="{{url_for('static', filename='landing/assets/images/everlyWell.png')}}" alt=""></a>
+                          </div>
+                          <div class="right-text">
+                          <a href="https://www.walgreens.com/store/c/everlywell-covid-19-test-home-collection-kit-dtc/ID=300413694-product&ban=covidfy21_newtestingpg_everlywell"><p><strong>EverlyWell</strong></p>
+                            <p><i>Test Home Collection Kit DTC </i></p></a>
+                          </div>
+                        
+
+                    </div>
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+
+                      <br>
+                        
+                        
+                        <div class="icon">
+                          <a href="https://www.walgreens.com/findcare/partner/HealthConfirmbyCRL?ec=hn:Covid-EML_Weekly-Update_NA_NA_NA_NA_1_salivaorderkit&$web_only=true&~campaign=hn:Covid-EML_Weekly-Update_NA_NA_NA_NA_1_salivaorderkit&cid=wagDM2880&wag_mid=737875801&bid=882816903#faq&ban=covidfy21_newtestingpg_healthconfirm"><img src="{{url_for('static', filename='landing/assets/images/healthConfirm.png')}}" alt=""></a>
+                        </div>
+                        <div class="right-text">
+                          <a href="https://www.walgreens.com/findcare/partner/HealthConfirmbyCRL?ec=hn:Covid-EML_Weekly-Update_NA_NA_NA_NA_1_salivaorderkit&$web_only=true&~campaign=hn:Covid-EML_Weekly-Update_NA_NA_NA_NA_1_salivaorderkit&cid=wagDM2880&wag_mid=737875801&bid=882816903#faq&ban=covidfy21_newtestingpg_healthconfirm"><p><strong>healthconfirm</strong></p>
+                          <p><i>COVID-19 Easy Saliva Collection </i></p></a>
+                        </div>
+                      
+
+                  </div>
+                    </div>
+
+
+                      
+
+                    <div class="col-lg-12">
+                      <br>
+                          <h4><span><strong>Drive Through COVID Testing Procedure</strong></span></h4>
+                          <br>
+                        </div>
+                        
+                      <div class="col-lg-6">
+                          <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                            <div class="procedure">
+                          <div class="icon">
+                            <a href="https://www.walgreens.com/findcare/covid19/testing/consent?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/questionnaire.png')}}" alt=""></a>
+                          </div>
+                          <div class="right-text">
+                            <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Step 1</strong></p>
+                            <p><i>Complete a quick questionnaire</i></p></a>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-6">
+                         <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                          <div class="procedure">
+                        <div class="icon">
+                          <a href="https://www.walgreens.com/findcare/covid19/testing/consent?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/chooseLocation.png')}}" alt=""></a>
+                        </div>
+                        <div class="right-text">
+                          <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Step 2</strong></p>
+                          <p><i>Choose a location and time</i></p></a>
+                        </div>
+                      </div>
+                      </div>
+                      
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                        <div class="procedure">
+                      <div class="icon">
+                        <a href="https://www.walgreens.com/findcare/covid19/testing/consent?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/gotoLocation.png')}}" alt=""></a>
+                      </div>
+                      <div class="right-text">
+                        <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Step 3</strong></p>
+                        <p><i>Go to the testing location and remain in your vehicle with the window rolled up.</i></p></a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                      <div class="procedure">
+                    <div class="icon">
+                      <a href="https://www.walgreens.com/findcare/covid19/testing/consent?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/documents.png')}}" alt=""></a>
+                    </div>
+                    <div class="right-text">
+                      <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Step 4</strong></p>
+                      <p><i>Show your confirmation email, a valid state ID or driver’s license, and insurance card.</i></p></a>
+                    </div>
+                  </div>
+                  </div>
+                  
+                </div>
+
+                    <div class="col-lg-6">
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                        <div class="procedure">
+                          <br>
+                      <div class="icon">
+                        <a href="https://www.walgreens.com/findcare/covid19/testing/consent?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/swabtesting.png')}}" alt=""></a>
+                      </div>
+                      <div class="right-text">
+                        <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Step 5</strong></p>
+                        <p><i>Perform the nasal swab yourself under the direction of a pharmacy team member</i></p></a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                      <div class="procedure">
+                        <br>
+                    <div class="icon">
+                      <a href="https://www.walgreens.com/findcare/covid19/testing/consent?ban=covidfy21_newtestingpg_travel"><img src="{{url_for('static', filename='landing/assets/images/getResult.png')}}" alt=""></a>
+                    </div>
+                    <div class="right-text">
+                      <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_travel"><p><strong>Step 6</strong></p>
+                      <p><i>Get your result.</i></p></a>
+                    </div>
+                  </div>
+                  </div>
+                  
+                </div>
+                
+                <div class="col-lg-12">
+                  <br>
+                  <p>***   Patients ages 3-18 will need a parent or legal guardian while they self-administer the COVID-19 test.</p>
+                  <br>
+                </div>
+
+                   <br>
+                    <h4><span><strong>Scheduling a visit with below-metioned sites</strong></span></h4>
+                    <div class="col-lg-2">
+                      
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <br>
+                        <p><span class="iconify" data-icon="ion-car" data-inline="false"></span><a href="https://www.cvs.com/minuteclinic/covid-19-testing"><span> CVS</span></a></p>
+                        
+                        <img src="{{url_for('static', filename='landing/assets/images/cvs.png')}}" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                      <br>
+                      <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        
+                        <a href="https://www.cvs.com/minuteclinic/clinic-visit"><p><span class="yellow"><span class="iconify" data-icon="ion-car-sport" data-inline="false"></span><em> In-person visit</em></span></p></a>
+                        <a href="https://www.cvs.com/minuteclinic/virtual-care/telehealth-options"><p><span class="yellow"><span class="iconify" data-icon="ion-ios-telephone" data-inline="false"></span><em> Telehealth visit</em></span></p></a>
+                        <a href="https://www.cvs.com/minuteclinic/insurance-and-billing"><p><span class="yellow"><span class="iconify" data-icon="ion-calculator" data-inline="false"></span><em> insurance & Pricing</em></span></p></a>
+                        <a href="https://www.cvs.com/minuteclinic/insurance-and-billing/bill-pay"><p><span class="yellow"><span class="iconify" data-icon="ion-ios-card" data-inline="false"></span><em> Pay Bill</em></span></p></a>
+                        <a href="https://www.cvs.com/minuteclinic/reserve-online"><p><span class="yellow"><span class="iconify" data-icon="ion-calendar-number-sharp" data-inline="false"></span><em> Plan a Visit</em></span></p></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                      <br>
+                      <p><span class="iconify" data-icon="ion-car" data-inline="false"></span><a href="https://www.walgreens.com/findcare/covid19/testing"><span> walgreen</span></a> </p>
+                      <a href="https://www.walgreens.com/findcare/covid19/testing"><img src="{{url_for('static', filename='landing/assets/images/walgreen.png')}}" alt=""></a>
+                      </div>
+                  </div>
+
+
+                  <div class="col-lg-4">
+                    <br>
+                    <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                      
+                      <a href="https://www.walgreens.com/findcare/covid19/testing?ban=covidfy21_newtestingpg_icon3"><p><span class="yellow"><span class="iconify" data-icon="ion-car-sport" data-inline="false"></span><em> Free Drive-Thru</em></span></p></a>
+                        <a href="https://www.walgreens.com/topic/promotion/covid-testing.jsp#!"><p><span class="yellow"><span class="iconify" data-icon="ion-ios-telephone" data-inline="false"></span><em> PCR at-home testing</em></span></p></a>
+                        <a href="https://www.walgreens.com/topic/promotion/covid-testing.jsp#!"><p><span class="yellow"><span class="iconify" data-icon="ion-calculator" data-inline="false"></span><em> Rapid antigen self-test</em></span></p></a>
+                        <a href="https://www.walgreens.com/topic/promotion/covid19-faqs.jsp?ban=covidfy21_newtestingpg_icon4"><p><span class="yellow"><span class="iconify" data-icon="ion-calendar-number-sharp" data-inline="false"></span><em> Frequently Asked Questions</em></span></p></a>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <br>
+                  <p>*** click texts and images to redirect</p>
+                  <br>
+                </div>
+
+                  </div>
+                  
+                  
+                  
+                  </div>
+                </div>
+                
+                
+              
+              <div class="col-lg-3 align-self-center">
+                <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                  <img src="{{url_for('static', filename='landing/assets/images/getVaccinatedFigure.png')}}" alt="person graphic" width="200" height="275" >
+                </div>
+              
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+
+  <div id="news" class="our-news section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>Check Out <em>Trending</em> News regarding <span>COVID</span></h2>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="top-dec">
+            <img src="{{url_for('static', filename='landing/assets/images/COVIDNews.png')}}"   alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="left-image">
+            <a href="#"><img src="{{news['newsImage'][0]}}" alt="Workspace Desktop"></a>
+            <div class="info">
+              <div class="inner-content">
+                <ul>
+                  <li><i class="fa fa-calendar"></i> {{news['newsDate'][0]}}</li>
+                  <li><i class="fa fa-users"></i> {{news['newsCreator'][0]}}</li>
+                  <li><i class="fa fa-folder"></i> {{news['folder']}}</li>
+                </ul>
+                <a href="{{news['newsLink'][0]}}"><h4>{{news['newsTitle'][0]}}</h4></a>
+                <a href="{{news['newsLink'][0]}}"><p>{{news['newsDescription'][0]}}</p></a>
+                <div class="main-blue-button">
+                  <a href="https://www.nytimes.com/search?query=covid">Discover More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="right-list">
+            <ul>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> {{news['newsDate'][1]}}</span>
+                  <a href="{{news['newsLink'][1]}}"><h4>{{news['newsTitle'][1]}}</h4></a>
+                  <a href="{{news['newsLink'][1]}}"><p>{{news['newsDescription'][1]}}</p></a>
+                </div>
+                <div class="right-image">
+                  <a href="{{news['newsLink'][1]}}"><img src="{{news['newsImage'][1]}}" alt=""></a>
+                </div>
+              </li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> {{news['newsDate'][2]}}</span>
+                  <a href="{{news['newsLink'][2]}}"><h4>{{news['newsTitle'][2]}}</h4></a>
+                  <a href="{{news['newsLink'][2]}}"><p>{{news['newsDescription'][2]}}</p></a>
+                </div>
+                <div class="right-image">
+                  <a href="{{news['newsLink'][2]}}"><img src="{{news['newsImage'][2]}}" alt=""></a>
+                </div>
+              </li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> {{news['newsDate'][3]}}</span>
+                  <a href="{{news['newsLink'][3]}}"><h4>{{news['newsTitle'][3]}}</h4></a>
+                  <a href="{{news['newsLink'][3]}}"><p>{{news['newsDescription'][3]}}</p></a>
+                </div>
+                <div class="right-image">
+                  <a href="{{news['newsLink'][3]}}"><img src="{{news['newsImage'][3]}}" alt=""></a>
+                </div>
+              </li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="news-subscribe" class="news-subscribe wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                  <h2>Getting Latest News by Subscribing our Website</h2>
+                  <form id="news-subscribe" action="" method="get">
+                    <input type="text" name="website" id="website" placeholder="Your Phone Number" required="">
+                    <input type="text" name="website" id="website" placeholder="Your Name" required="">
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                    <button type="submit" id="form-submit" class="main-button ">news-subscribe</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio" class="our-portfolio section wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.25s">
+    <div class="portfolio-left-dec">
+      <img src="" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Our Android APP provides <em>Surrounding COVID cases Prediction</em> &amp;  <span> Daily COVID Self-Report </span>Services for Clients</h2>
+            <span>APP functionality display</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-portfolio">
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/androidAPP1.jpeg')}}"   alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="#" target="_parent"><h4>1st Feature</h4></a>
+                    <span>Raise the awareness of COVID</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidAPP2.jpeg')}}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>2nd Feature</h4></a>
+                    <span>Self-report health condition</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp3.jpeg')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="#" target="_parent"><h4>3rd Feature</h4></a>
+                    <span>Get real-time Covid Information</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/androidApp4.jpeg')}}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>4th Feature</h4></a>
+                    <span>Check COVID infection in your neighborhood</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp5.jpeg')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>5th Feature</h4></a>
+                    <span>Subscribe to receive latest news about Covid</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp6.jpeg')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>6th Feature</h4></a>
+                    <span>Get Latest Research about COVID</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp7.jpeg')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>7th Feature</h4></a>
+                    <span>Know more about economic trend under COVID</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp8.jpeg')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>8th Feature</h4></a>
+                    <span>Authentic Infomation Source</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidAPP9.png')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>9th Feature</h4></a>
+                    <span>Knowing COVID situation worldwide</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp10.png')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4> 10th Feature</h4></a>
+                    <span>Log in with facebook and Google</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp11.jpeg')}}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>11th Feature</h4></a>
+                    <span>Personalized Account</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{{url_for('static', filename='landing/assets/images/AndroidApp12.jpeg')}}"  alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>12th Feature</h4></a>
+                    <span>Android Version is available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pricing" class="pricing-tables wow slideInRight" data-wow-duration="1s" data-wow-delay="0.25s">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+              <h2>Select a suitable <em>plan</em> for your <span>Information</span></h2>
+              <span>Our Plans</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="item first-item">
+              <h4>Starter Plan</h4>
+              <em>$10/mo</em>
+              <span>$8</span>
+              <ul>
+                <li>Get access to partial data source</li>
+                <li>Get news once a week</li>
+                <li>Only web access</li>
+                <li>Limited customer support</li>
+              </ul>
+              <div class="main-blue-button-hover">
+                <a href="#">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="item second-item">
+              <h4>Standard Plan</h4>
+              <em>$20/mo</em>
+              <span>$16</span>
+              <ul>
+                <li>Get access to all authentic data source</li>
+                <li>Get news every three days</li>
+                <li>Web and Mobile phone access</li>
+                <li>Limited customer support</li>
+              </ul>
+              <div class="main-blue-button-hover">
+                <a href="#">Get it Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="item third-item">
+              <h4>Advanced Plan</h4>
+              <em>$30/mo</em>
+              <span>$24</span>
+              <ul>
+                <li>Get access to all authentic data source</li>
+                <li>Get news every day</li>
+                <li>Web and Mobile phone access</li>
+                <li>24/7 customer support</li>
+              </ul>
+              <div class="main-blue-button-hover">
+                <a href="#">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          
+            <div id="map">
+              <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ7cv00DwsDogRAMDACa2m4K8&key=AIzaSyATpvb9LpajxCBXQzhayUuY0qZLkV05HdA"></iframe>            </div>
+            <div class="info">
+              <div class="col-lg-1">
+              <span><i class="fa fa-phone"></i></span>
+            </div>
+            <div class="col-lg-5">
+              <span><a href="#">+1 312-843-7890<br>+86 173-1805-0922</a></span>
+            </div>
+              <div class="col-lg-1">
+               <span><i class="fa fa-envelope"></i> </span>
+            </div>
+            <div class="col-lg-5">
+              <span><a href="#">BerylX.Zhang@gmail.com<br>xuanzhang.beryl@gmail.com</a></span>
+           </div>
+            </div>
+        
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>Feel free to <em>Contact Us</em> </h2>
+          </div>
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="contact-dec">
+              <img src="{{url_for('static',filename = 'landing/assets/images/contactFigure.png')}}" alt="">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container wow slideInDown" data-wow-duration="1.5s" data-wow-delay="0s">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="about footer-item">
+            <div class="logo">
+              <a href="#"><img src="{{url_for('static',filename = 'landing/assets/images/1024.png')}}"  alt="Beryl Bear Product"></a>
+             <br>
+              <a href="#">Beryl Bear Product</a>
+            </div>
+            <a href="#">BerylX.Zhang@gmail.com</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="services footer-item">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Real-time COVID Update</a></li>
+              <li><a href="#">Economic Trend</a></li>
+              <li><a href="#">Latest News</a></li>
+              <li><a href="#">Neighborhood COVID Report</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="community footer-item">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Authentic Data Sources</a></li>
+              <li><a href="#">Latest COVID Research </a></li>
+              <li><a href="#">Worldwide Covid Evaluation</a></li>
+              <li><a href="#">Self Health Report</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="subscribe-newsletters footer-item">
+            <h4>Subscribe Newsletters</h4>
+            <p>Get our latest news and ideas to your inbox</p>
+            <form action="#" method="get">
+              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+              <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2021 Beryl Bear Co., Ltd. All Rights Reserved. 
+            <br>
+            Designed by <a rel="nofollow" href="berylxzhang.github.io" title="Real-time update of COVID">Real-time update of COVID</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{{url_for('static',filename = 'landing/vendor/jquery/jquery.min.js')}}"  ></script>
+  <script src="{{url_for('static',filename = 'landing/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename = 'landing/assets/js/owl-carousel.js')}}"></script>
+  <script src="{{url_for('static',filename = 'landing/assets/js/animation.js')}}" ></script>
+  <script src="{{url_for('static',filename = 'landing/assets/js/imagesloaded.js')}}" ></script>
+  <script src="{{url_for('static',filename = 'landing/assets/js/templatemo-custom.js')}}" ></script>
+  <script>
+    // Acc
+      $(document).on("click", ".naccs .menu div", function() {
+        var numberIndex = $(this).index();
+  
+        if (!$(this).is("active")) {
+            $(".naccs .menu div").removeClass("active");
+            $(".naccs ul li").removeClass("active");
+  
+            $(this).addClass("active");
+            $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+  
+            var listItemHeight = $(".naccs ul")
+              .find("li:eq(" + numberIndex + ")")
+              .innerHeight();
+            $(".naccs ul").height(listItemHeight + "px");
+          }
+      });
+    </script>
+</body>
+</html>

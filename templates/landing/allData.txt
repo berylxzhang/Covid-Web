@@ -1,0 +1,1 @@
+{"totalTest": 2886094909, "totalCases": "191191684", "newCases": "437361", "totalDeaths": "4105341", "newDeaths": "6664", "totalRecovered": "174145953", "newRecovered": "330909", "activeCases": "12940390", "criticalCases": "80566"}
